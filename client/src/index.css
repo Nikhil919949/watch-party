@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-reel-900 text-reel-100 antialiased;
+  background-image: radial-gradient(circle at top, rgba(239, 182, 90, 0.06), transparent 55%);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: theme("colors.reel.600");
+  border-radius: 999px;
+}
+
+.focus-ring {
+  @apply outline-none focus-visible:ring-2 focus-visible:ring-marquee-500 focus-visible:ring-offset-2 focus-visible:ring-offset-reel-900;
+}
